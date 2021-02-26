@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Newspal",
+  "description": "Making fake news fake news",
+  "version": "1.0.0",
+
+  "icons": { "72": "./images/BlueBadge.png" },
+
+  "browser_action": {
+    "default_icon": "./images/BlueBadge.png",
+    "default_title": "Newspal",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": ["activeTab", "tabs"]
+}
