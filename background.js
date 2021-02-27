@@ -3,10 +3,15 @@ window.bears = {}
 chrome.runtime.onMessage.addListener( function (request, sender, sendResponse) {
     window.bears[request.url] = request.count
 
-    //alert(request.url.includes("google.com"), request.url)
+    // TESTING TO CHECK FRONT END IS WORKING
+
+    // ONCE TF MODEL IS CONNECTED, OUTPUT THROUGH HERE
 
     if (request.action === "updateIcon") {
         if (request.url.includes("bbc.com")) {
+            chrome.browserAction.setIcon({path: "./images/BlueBadge.png"});
+
+        }else if (request.url.includes("bbc.co.uk")) {
             chrome.browserAction.setIcon({path: "./images/BlueBadge.png"});
 
         }else if (request.url.includes("telegraph.com")) {

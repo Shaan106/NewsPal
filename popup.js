@@ -18,13 +18,12 @@ document.addEventListener('DOMContentLoaded', function () {
     //     document.body.appendChild(div)
     // }
 
+    //TESTING WORD COUNTER 
     const bg = chrome.extension.getBackgroundPage()
     
     Object.keys(bg.bears).forEach(function (url) {
         const div = document.createElement('div')
         div.textContent = `${url}: ${bg.bears[url]}`
-        //adds list of bear in the popup
-        //document.body.appendChild(div)
     })
 
 }, false)

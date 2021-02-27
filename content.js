@@ -11,7 +11,7 @@ const matches = document.documentElement.innerHTML.match(re)
 
 var matchesNum = 0
 
-alert(document.title)
+// alert(document.title)
 
 
 
